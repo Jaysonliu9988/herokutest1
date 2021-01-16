@@ -4,7 +4,7 @@ function Createdb(){
     $servername = "us-cdbr-east-03.cleardb.com";
     $username = "b2e7185b924846";
     $password = "7305f455";
-    $dbname = "bookstore";
+    $dbname = "heroku_1f0170230277329";
 
     // create connection
     $con = mysqli_connect($servername, $username, $password);
