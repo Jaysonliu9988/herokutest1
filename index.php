@@ -2,7 +2,7 @@
 
 // require_once realpath("../vendor/autoload.php");
 require_once ("src/php/component.php");
-// require_once ("src/php/operation.php");
+require_once ("src/php/operation.php");
 
 ?>
 
