@@ -27,14 +27,16 @@ function Createdb(){
 
     if(mysqli_query($con, $sql)){
         $con = mysqli_connect($servername, $username, $password, $dbname);
-
+        
         $sql = "
                 CREATE TABLE IF NOT EXISTS books(
-                    id INT(11) NOT NULL AUTO_INCREMENT,
+                    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
                     book_name VARCHAR (25) NOT NULL,
                     book_publisher VARCHAR (20),
                     book_price FLOAT 
                 );
+
+                SET @@auto_increment_increment=1
         ";
 
         if(mysqli_query($con, $sql)){
