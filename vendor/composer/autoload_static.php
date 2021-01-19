@@ -6,6 +6,38 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitd5ddf9d1614c109c5fa3f2690d07196b
 {
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PackageVersions\\' => 16,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\' => 16,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PackageVersions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
+        ),
+        'Doctrine\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/dbal/src',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -13,6 +45,8 @@ class ComposerStaticInitd5ddf9d1614c109c5fa3f2690d07196b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd5ddf9d1614c109c5fa3f2690d07196b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd5ddf9d1614c109c5fa3f2690d07196b::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInitd5ddf9d1614c109c5fa3f2690d07196b::$classMap;
 
         }, null, ClassLoader::class);
