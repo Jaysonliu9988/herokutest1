@@ -35,8 +35,6 @@ function Createdb(){
                     book_publisher VARCHAR (20),
                     book_price FLOAT 
                 );
-
-                SET @@auto_increment_increment=1
         ";
 
         if(mysqli_query($con, $sql)){
