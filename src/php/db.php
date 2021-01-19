@@ -30,7 +30,7 @@ function Createdb(){
 
         $sql = "
                 CREATE TABLE IF NOT EXISTS books(
-                    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                    id INT(11) NOT NULL AUTO_INCREMENT,
                     book_name VARCHAR (25) NOT NULL,
                     book_publisher VARCHAR (20),
                     book_price FLOAT 
